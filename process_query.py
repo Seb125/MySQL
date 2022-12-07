@@ -3,11 +3,7 @@ import mysql.connector
 import numpy as np
 
 
-def create(table_name):
-
-    cnx = mysql.connector.connect(user='root', password='Dhwoiue832749823',
-                              host='127.0.0.1',
-                              database='Jazz')
+def create(table_name, cnx):
 
 
     cursor = cnx.cursor()
@@ -52,5 +48,4 @@ def create(table_name):
             break
             
     window.close()
-    cursor.close()
-    cnx.close()
+ 
